@@ -51,7 +51,7 @@ Text in this section.
 
 [Example link](https://www.example.com)
 
-![Image](https://via.placeholder.com/400x200)
+![Image](https://placehold.co/400x200)
 
 ---
 

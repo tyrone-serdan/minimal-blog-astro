@@ -70,7 +70,7 @@ This is ~~strikethrough~~ using double tildes.
 
 [Link text](https://www.example.com)
 
-![Alt text](https://via.placeholder.com/400x200)
+![Alt text](https://placehold.co/400x200)
 
 ---
 
