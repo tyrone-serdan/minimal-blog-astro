@@ -20,5 +20,21 @@ if (!post) {
 const { Content } = await render(post);
 ---
 
-<h1>{post.data.title}</h1>
-<Content />
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{post.data.title}</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/digitallytailored/classless@latest/classless.min.css"
+		/>
+	</head>
+	<body>
+		<h1>{post.data.title}</h1>
+		<h3>{post.data.date}</h3>
+		<Content />
+		<a href="/">Home</a>
+	</body>
+</html>

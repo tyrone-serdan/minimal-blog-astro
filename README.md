@@ -1,43 +1,49 @@
-# Astro Starter Kit: Minimal
+# Minimal Blog
 
-```sh
-npm create astro@latest -- --template minimal
+A simple Astro blog showcasing markdown features. Great for learning how Astro blogs work.
+
+## Quick Start
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Visit `http://localhost:4321` to see the blog.
 
-## 🚀 Project Structure
+## Adding Posts
 
-Inside of your Astro project, you'll see the following folders and files:
+Create a new `.md` file in `src/content/blog/`:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```markdown
+---
+title: My New Post
+date: "2026-03-01"
+description: A short description
+---
+
+Your content here...
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+The post will automatically appear on the blog homepage.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Project Structure
 
-Any static assets, like images, can be placed in the `public/` directory.
+```
+src/
+├── content/
+│   └── blog/           # Your blog posts (.md files)
+├── pages/
+│   ├── index.astro     # Homepage - lists all posts
+│   └── blog/
+│       └── [slug].astro  # Individual post page
+```
 
-## 🧞 Commands
+## Building for Production
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npm run build
+npm run preview
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This creates a static site in the `dist/` folder, ready to deploy to any static host.
